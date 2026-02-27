@@ -1,4 +1,4 @@
-const API = "http://localhost:8080";
+const API = "https://stayfinder-backend-2-uuo6.onrender.com";
 
 function register() {
 
