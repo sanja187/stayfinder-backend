@@ -2,7 +2,7 @@ const API = "https://stayfinder-backend-2-uuo6.onrender.com";
 
 function register() {
 
-fetch(API+"/auth/register", {
+fetch(API+"/api/auth/register", {
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({
@@ -17,7 +17,7 @@ role: document.getElementById("role").value
 .then(data => {
 
     if(data.message){
-        alert(data.message);   // 🔴 shows "Email already exists"
+        alert(data.message);
         return;
     }
 
@@ -33,7 +33,7 @@ role: document.getElementById("role").value
 
 function login() {
 
-fetch(API+"/auth/login", {
+fetch(API+"/api/auth/login", {
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({
@@ -43,12 +43,12 @@ password: password.value
 }).then(r=>r.json())
 .then(data=>{
 
-console.log(data);   // 🔥 add this to confirm
+console.log(data);
 
 if(data.token){
     localStorage.setItem("token", data.token);
     localStorage.setItem("role", data.role);
-	localStorage.setItem("name",data.name);
+    localStorage.setItem("name",data.name);
 
     if(data.role === "OWNER"){
         location="owner.html";
@@ -59,7 +59,5 @@ if(data.token){
     alert("Invalid email or password");
 }
 })
-
-
 
 }
