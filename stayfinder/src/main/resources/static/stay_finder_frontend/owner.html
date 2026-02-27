@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>Owner Dashboard</h2>
+<div class="menu">
+<button onclick="showOwnerSection('addHostel')">Add Hostel</button>
+<button onclick="showOwnerSection('myHostels')">My Hostels</button>
+<button onclick="showOwnerSection('addRoom')">Add Room</button>
+<button onclick="showOwnerSection('myRooms')">My Rooms</button>
+</div>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="top-marquee">
+		<marquee>
+		🏠 Find Verified Hostels & Rooms | ⭐ Student Rated Listings | 🔐 Safe & Trusted Owners | 📞 Direct Contact | StayFinder – Smart Living Starts Here
+		</marquee>
+</div>
+<div class="promo-banner">
+			🎓 Special for Students: Find affordable & trusted stays near your college today!
+			</div>
+			<div class="trust-box">
+			✔ Verified Owners  
+			✔ Student Reviews  
+			✔ Transparent Ratings  
+			✔ Safe Contact System  
+			</div>
+<!-- ADD HOSTEL -->
+<div id="addHostelSection" class="section">
+<h3>Add Hostel</h3>
+
+<input id="hostelName" placeholder="Hostel Name">
+
+<select id="gender">
+<option>Boys</option>
+<option>Girls</option>
+</select>
+
+<input id="rent" placeholder="Rent">
+
+<select id="sharingType">
+<option value="2">2 Sharing</option>
+<option value="3">3 Sharing</option>
+<option value="4">4 Sharing</option>
+</select>
+
+<label><input type="checkbox" id="wifi"> WiFi</label>
+<label><input type="checkbox" id="ac"> AC</label>
+<label><input type="checkbox" id="laundry"> Laundry</label>
+<label><input type="checkbox" id="mess"> Mess</label>
+<label><input type="checkbox" id="hotWater"> Hot Water</label>
+
+<input id="location" placeholder="Location">
+<input id="contact" placeholder="Contact Number">
+
+<textarea id="hostelDetails" placeholder="Hostel Rules / Details"></textarea>
+
+<input type="file" id="file">
+
+<button onclick="addHostel()">Add Hostel</button>
+</div>
+
+
+<!-- MY HOSTELS -->
+<div id="myHostelsSection" class="section">
+<h3>My Hostels</h3>
+
+<table border="1" width="100%">
+<thead>
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Rent</th>
+<th>Gender</th>
+<th>Sharing</th>
+<th>WiFi</th>
+<th>AC</th>
+<th>Laundry</th>
+<th>Mess</th>
+<th>Hot Water</th>
+<th>Location</th>
+<th>Details</th>
+<th>Rating</th>
+<th>Reviews</th>
+<th>Delete</th>
+
+</tr>
+</thead>
+<tbody id="myHostelsList"></tbody>
+</table>
+</div>
+
+
+<!-- ADD ROOM -->
+<div id="addRoomSection" class="section">
+<h3>Add Room</h3>
+
+<select id="roomType">
+<option>1RK</option>
+<option>1BHK</option>
+<option>2BHK</option>
+</select>
+
+<input id="roomRent" placeholder="Rent">
+<input id="roomSharing" placeholder="Sharing">
+<input id="roomLocation" placeholder="Location">
+<input id="roomContact" placeholder="Contact">
+
+<textarea id="roomDetails" placeholder="Room Rules / Details"></textarea>
+
+<label><input type="checkbox" id="roomParking"> Parking</label>
+
+<input type="file" id="roomImage">
+
+<button onclick="addRoom()">Add Room</button>
+</div>
+
+
+<!-- MY ROOMS -->
+<div id="myRoomsSection" class="section">
+<h3>My Rooms</h3>
+
+<table border="1" width="100%">
+<thead>
+<tr>
+<th>Type</th>
+<th>Rent</th>
+<th>Image</th>
+<th>Sharing</th>
+<th>Parking</th>
+<th>Location</th>
+<th>Contact</th>
+<th>Details</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody id="myRoomsList"></tbody>
+</table>
+</div>
+<div class="footer">
+<p>© 2026 StayFinder. All Rights Reserved.</p>
+<p>Built for students to find safe and trusted accommodation.</p>
+</div>
+
+<script src="js/owner.js"></script>
+
+</body>
+</html>

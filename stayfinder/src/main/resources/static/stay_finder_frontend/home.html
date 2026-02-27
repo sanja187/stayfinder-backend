@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+		
+<div class="navbar">
+    <h2>StayFinder</h2>
+	<!--<div class="welcome-text" id="welcomeUser"></div>-->
+    <div class="menu">
+        <button onclick="showSection('hostel')">Hostels</button>
+        <button onclick="showSection('room')">Rooms</button>
+        <button onclick="showSection('roommate')">Roommates</button>
+		<button onclick="showSection('postRoommate')">Post Roommate</button>
+		<button onclick="showSection('myPosts')">My Posts</button>
+		<button onclick="logout()">Logout</button>
+
+    </div>
+</div>
+<div class="top-marquee">
+		<marquee>
+		🏠 Find Verified Hostels & Rooms | ⭐ Student Rated Listings | 🔐 Safe & Trusted Owners | 📞 Direct Contact | StayFinder – Smart Living Starts Here
+		</marquee>
+</div>
+<div class="promo-banner">
+			🎓 Special for Students: Find affordable & trusted stays near your college today!
+			</div>
+			<div class="trust-box">
+			✔ Verified Owners  
+			✔ Student Reviews  
+			✔ Transparent Ratings  
+			✔ Safe Contact System  
+			</div>
+
+<!-- HOSTEL -->
+<div id="hostelSection" class="section">
+<h3>Search Hostels</h3>
+
+<input id="hLocation" placeholder="Location">
+<select id="hGender">
+<option value="">Any</option>
+<option>Boys</option>
+<option>Girls</option>
+</select>
+<input id="hRent" placeholder="Max Rent">
+<label><input type="checkbox" id="hWifi"> Wifi</label>
+<label><input type="checkbox" id="hMess"> Mess</label>
+
+<button onclick="searchHostels()">Search</button>
+</div>
+
+<!-- ROOM -->
+<div id="roomSection" class="section">
+<h3>Search Rooms</h3>
+
+<input id="rLocation" placeholder="Location">
+<select id="rType">
+<option value="">Any</option>
+<option>1RK</option>
+<option>1BHK</option>
+<option>2BHK</option>
+</select>
+<input id="rRent" placeholder="Max Rent">
+<label><input type="checkbox" id="rParking"> Parking</label>
+
+<button onclick="searchRooms()">Search</button>
+</div>
+
+<!-- ROOMMATE -->
+<div id="roommateSection" class="section">
+<h3>Find Roommate</h3>
+
+<input id="rmLocation" placeholder="Location">
+<select id="rmGender">
+<option value="">Any</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+<input id="rmRent" placeholder="Max Rent">
+
+<button onclick="searchRoommates()">Search</button>
+</div>
+
+<div id="postRoommateSection" class="section">
+
+<h3>Post Roommate Needed</h3>
+
+<input id="rmDesc" placeholder="Room Description (ex: 2BHK)">
+<div class="error" id="descError"></div>
+
+<input id="postRent" placeholder="Rent">
+<div class="error" id="rentError"></div>
+
+
+
+<input id="rmSharing" placeholder="Sharing (Ex: 2 people already living)">
+<div class="error" id="sharingError"></div>
+<textarea id="rmDetails" placeholder="Enter full room details like:
+• Flat type
+• Current roommates
+• Facilities
+• Rent split
+• Preferred habits"></textarea>
+
+<select id="rmGenderPref">
+<option value="">Select Gender Preference</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+<div class="error" id="genderError"></div>
+
+<input id="postLocation" placeholder="Location">
+<div class="error" id="locationError"></div>
+
+<input id="postContact" placeholder="Contact">
+<div class="error" id="contactError"></div>
+
+<input type="file" id="postImage">
+<div class="error" id="imageError"></div>
+
+<button onclick="postRoommate()">Post</button>
+
+</div>
+<div id="myPostsSection" class="section">
+<h3>My Roommate Posts</h3>
+
+<div id="myPostsList"></div>
+</div>
+
+<hr>
+
+<div id="results"></div>
+
+<div class="footer">
+<p>© 2026 StayFinder. All Rights Reserved.</p>
+<p>Built for students to find safe and trusted accommodation.</p>
+</div>
+<script src="js/home.js"></script>
+
+</body>
+</html>
